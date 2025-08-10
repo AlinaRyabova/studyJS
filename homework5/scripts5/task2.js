@@ -2,7 +2,7 @@
 
 if (confirm("Почати виведення місяців?")) {
   for (let month = 3; month <= 8; month++)
-    if (month === 6 || month === 7 || month === 8) {
+    if (month >= 6) {
       alert(`Місяць номер: ${month} -це літо`);
     } else {
       alert(`Місяць номер: ${month} -це весна`);

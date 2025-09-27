@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2>Задача 1. Розробити калькулятор</h2>
+      <label>First number<input type="number" id="num1" value="0" /></label>
+      <br /><br />
+      <label>Second number<input type="number" id="num2" value="0" /></label>
+      <br /><br />
+
+      <button onclick="calculate('add')">Додати</button>
+      <button onclick="calculate('subtract')">Відняти</button>
+      <button onclick="calculate('multiply')">Помножити</button>
+      <button onclick="calculate('divide')">Поділити</button>
+
+      <hr />
+
+      <label>Результат <input type="text" id="result" value="0" /></label>
+    </div>
+    <script src="./scripts/task1.js"></script>
+  </body>
+</html>

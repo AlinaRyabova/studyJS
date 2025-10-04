@@ -1,0 +1,62 @@
+:root{
+      --card-w: 140px;
+      --card-h: 80px;
+      --gap: 12px;
+    }
+    body{
+      font-family: Arial, Helvetica, sans-serif;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      padding:24px;
+      background:#f4f6fb;
+      color:#222;
+    }
+
+    h1{ margin:0 0 12px; font-size:20px; }
+    .controls { margin-bottom:12px; display:flex; gap:8px; align-items:center; }
+
+    .board {
+      display:grid;
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+      gap: var(--gap);
+      width: min(980px, 100%);
+    }
+
+    .card {
+      width:100%;
+      min-height:var(--card-h);
+      height:var(--card-h);
+      background: white;
+      border-radius:8px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+      cursor:pointer;
+      user-select: none;
+      border: 2px solid transparent;
+      transition: transform .12s ease, border-color .12s ease, opacity .25s ease;
+      font-weight:600;
+      font-size:16px;
+      text-align:center;
+    }
+
+    .card:hover { transform: translateY(-4px); }
+
+    .card.selected { border-color: #2b74ff; box-shadow: 0 6px 18px rgba(43,116,255,0.12); }
+    .card.wrong { border-color: #ff4d4f; box-shadow: 0 6px 18px rgba(255,77,79,0.12); }
+    .card.matched {
+      opacity: 0;
+      transform: scale(.8);
+      pointer-events: none;
+    }
+
+    .status { margin-left:8px; font-size:14px; color:#444; }
+    button { padding:8px 12px; border-radius:8px; border: none; background:#2b74ff; color:#fff; cursor:pointer; }
+    button.secondary { background:#6c757d; }
+    .small { font-size:13px; padding:6px 10px; border-radius:6px; }
+    @media (max-width:720px){
+      .board { grid-template-columns: repeat(3, 1fr); }
+    }

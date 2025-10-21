@@ -1,0 +1,22 @@
+footer {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #111;
+  color: #fff;
+  padding: 12px 0;
+}
+.footer-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer-inner p {
+  margin: 0;
+  font-size: 13px;
+  color: #ddd;
+}
